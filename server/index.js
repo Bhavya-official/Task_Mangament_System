@@ -14,7 +14,7 @@ const Task = require('./models/task.model')
 app.use(cors())
 app.use(express.json())
 
-mongoose.connect('mongodb://127.0.0.1:27017/full-mern-stack-video')
+mongoose.connect(process.env.MONGO_URL)
 
 app.post('/api/register', async (req, res) => {
 	try {
