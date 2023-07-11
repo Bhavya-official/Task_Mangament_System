@@ -31,7 +31,7 @@ function Form({ populate, task, isUpdate, onHide}) {
 			}),
 		})    
         } else {
-            response = await fetch(`${process.env.REACT_APP_BASE_URL/api/addtask}`, {
+            response = await fetch(`${process.env.REACT_APP_BASE_URL}/api/addtask`, {
                 method: 'POST',
                 headers: {
                     'x-access-token': localStorage.getItem('token'),
