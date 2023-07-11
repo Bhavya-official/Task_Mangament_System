@@ -25,7 +25,7 @@ function UserTasks() {
             history.push('/login')
             return
         }
-        const req = await fetch('http://localhost:1337/api/mytask', {
+        const req = await fetch(`${process.env.REACT_APP_BASE_URL}/api/mytask`, {
 			headers: {
 				'x-access-token': localStorage.getItem('token'),
 			},
@@ -65,7 +65,7 @@ function UserTasks() {
 
     const handleDelete = async(e) => {
         const id = e.target.getAttribute("data-id")
-        const response = await fetch('http://localhost:1337/api/deletetask', {
+        const response = await fetch(`${process.env.REACT_APP_BASE_URL}/api/deletetask`, {
             method: 'POST',
             headers: {
                 'x-access-token': localStorage.getItem('token'),
