@@ -19,7 +19,7 @@ function Form({ populate, task, isUpdate, onHide}) {
         e.preventDefault()
         let response
         if (isUpdate) {
-            response = await fetch('process.env.REACT_APP_BASE_URL/api/edittask', {
+            response = await fetch(`${process.env.REACT_APP_BASE_URL}/api/edittask`, {
 			method: 'PUT',
 			headers: {
                 'x-access-token': localStorage.getItem('token'),
@@ -31,7 +31,7 @@ function Form({ populate, task, isUpdate, onHide}) {
 			}),
 		})    
         } else {
-            response = await fetch('process.env.REACT_APP_BASE_URL/api/addtask', {
+            response = await fetch(`${process.env.REACT_APP_BASE_URL/api/addtask}`, {
                 method: 'POST',
                 headers: {
                     'x-access-token': localStorage.getItem('token'),
