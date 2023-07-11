@@ -7,7 +7,7 @@ function AdminDashBoard() {
   const history = useHistory()
   var tasks = []
   const getData = async () => {
-    const req = await fetch("http://localhost:1337/api/admindashboard", {
+    const req = await fetch(`${process.env.REACT_APP_BASE_URL}/api/admindashboard`, {
       headers: {
         "x-access-token": localStorage.getItem("token"),
       },
@@ -23,8 +23,10 @@ function AdminDashBoard() {
 
       tasks = await data.tasks
       d3.select("#root").html(Header)
+      
       d3.select("#root").insert('div', ":first-child").html(selectHtml)
       handleTableBody(data.tasks)
+      
       d3.selectAll('a').on('click', (e) => {
         handleDelete(e)
       })
@@ -109,7 +111,7 @@ function AdminDashBoard() {
   const handleDelete = async (e) => {
     const id = e.target.getAttribute("data-id")
     
-    const response = await fetch('http://localhost:1337/api/deletetask', {
+    const response = await fetch(`${process.env.REACT_APP_BASE_URL}/api/deletetask`, {
       method: 'POST',
       headers: {
         'x-access-token': localStorage.getItem('token'),
