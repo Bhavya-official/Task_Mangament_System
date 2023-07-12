@@ -10,7 +10,9 @@ const User = require('./models/user.model')
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcryptjs')
 const Task = require('./models/task.model')
+const bodyParser = require('body-parser')
 
+app.use(bodyParser.json())
 app.use(cors())
 app.use(express.json())
 
