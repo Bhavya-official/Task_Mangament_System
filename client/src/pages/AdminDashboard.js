@@ -168,9 +168,9 @@ function AdminDashBoard() {
         <div class="form-check form-check-inline">
             <select id="assignee" class="form-select form-select-sm" onChange={handleChange} name="assignee" value={inputs.assignee} aria-label=".form-select-sm example" required>
                 <option selected>Choose...</option>
-                <option value="A">A</option>
-                <option value="B">B</option>
-                <option value="C">C</option>
+                <option value="Shin">Shin</option>
+                <option value="John">John</option>
+                <option value="Mihir">Mihir</option>
             </select>
         </div>
       </div>
