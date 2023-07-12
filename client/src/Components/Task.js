@@ -1,4 +1,4 @@
-function Task ({ task, editHandle, onDelete }) {
+function Task ({ task, onDelete }) {
     const options = {
         month: 'short',
         year: '2-digit',
@@ -14,7 +14,7 @@ function Task ({ task, editHandle, onDelete }) {
                         <h5 className="card-title">{task.title}</h5>
                     </div>
                     <div className="icons">
-                        <a onClick={editHandle} data-bs-toggle="modal" data-bs-target={`b${task._id}`}><i data-id={task._id} className="fa fa-duatone fa-pen fa-sm edit-icon"></i></a>
+                        <a onClick={editHandle} data-bs-toggle="modal" data-bs-target={`#b${task._id}`}><i data-id={task._id} className="fa fa-duatone fa-pen fa-sm edit-icon"></i></a>
                         <a onClick={onDelete} ><i data-id={task._id} className="fa fa-trash fa-sm trash-icon"></i></a>
                     </div>
                 </div>
