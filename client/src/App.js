@@ -13,7 +13,7 @@ const App = () => {
 				<Route path="/register" exact component={Register} />
 				<Route path="/mytask" exact component={UserTasks} />
 				<Route path="/admindashboard" exact component={AdminDashBoard} />
-				<Redirect to="/login">
+				<Redirect to="/login" />
 			</BrowserRouter>
 		</div>
 	)
