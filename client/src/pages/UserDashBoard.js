@@ -20,8 +20,7 @@ function UserTasks() {
     })
     
     async function populateTask() {
-        if (localStorage.getItem("token")) {
-            console.log(",lnbjbj")
+        if (!localStorage.getItem("token")) {
             history.push('/login')
             return
         }
