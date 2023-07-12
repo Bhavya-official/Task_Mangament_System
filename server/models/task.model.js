@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const assignes = ["Shin", "John", "Mihir", "Kirti", "Shweta", "Bhavya"]
+const assignes = ["Shin", "John", "Mihir"]
 
 const Task = new mongoose.Schema(
 	{
